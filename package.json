@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugins",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Bao-Gun 的 DSH 插件索引源（静态 JSON，托管在 GitHub Pages）",
+  "type": "module",
+  "scripts": {
+    "index": "node scripts/build-index.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
