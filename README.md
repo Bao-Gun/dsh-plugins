@@ -8,6 +8,14 @@
 https://bao-gun.github.io/dsh-plugins/index.json
 ```
 
+国内机器（连不上 `bao-gun.github.io` 与 `raw.githubusercontent.com`）贴这一条，它随重扫立刻更新：
+
+```
+https://ghproxy.net/https://raw.githubusercontent.com/Bao-Gun/dsh-plugins/main/site/index.json
+```
+
+别用 jsDelivr 的 `@main` 当镜像：`cdn.` / `fastly.` / `gcore.` 三个域名共用 `max-age=604800, s-maxage=43200` 缓存，实测发版后即使掉 `purge.jsdelivr.net`，半小时后仍然返回旧内容。要钉死版本就把 `main` 换成 40 位 commit（代价是不再跟新版）。
+
 ## 这个仓库是什么
 
 一个静态 JSON 的生成器 + 托管点，不放插件代码。`scripts/plugins.mjs` 是插件清单，
@@ -40,6 +48,8 @@ https://bao-gun.github.io/dsh-plugins/index.json
 在插件自己的仓库里：改版本号 → 构建 → 提交（**含产物**）→ push。
 然后来这边 Actions 里手动跑一次 `pages`，或者等每天 03:17 UTC 那次定时。
 插件仓库的 push 不会通知这个仓库，这是定时任务的唯一理由。
+
+部署偶发 `Found 0 artifact(s)`（upload 与 deploy 的竞态，日志里是 `No artifacts named "github-pages" were found`）：`gh run rerun <run-id> --failed` 一次即好，别去改 workflow。
 
 ## 校验
 
