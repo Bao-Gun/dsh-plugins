@@ -48,14 +48,14 @@
       "versions": [
         {
           "version": "0.2.0",
-          "publishTimestamp": 1795492269,
+          "publishTimestamp": 1795510682,
           "engines": {
             "dsh": ">=0.2.2-rc.5"
           },
           "source": {
             "type": "git",
             "url": "https://github.com/Bao-Gun/dsh-restart.git",
-            "commit": "5ea4149b6e8be84d563c431311edfa37212ca2c6"
+            "commit": "cfc81960f8bebc56cab5b09dad65d5497bd6c9b0"
           }
         }
       ]
@@ -87,15 +87,15 @@
       },
       "versions": [
         {
-          "version": "0.1.0",
-          "publishTimestamp": 1795486625,
+          "version": "0.2.0",
+          "publishTimestamp": 1795515319,
           "engines": {
             "dsh": ">=0.2.2-rc.5"
           },
           "source": {
             "type": "git",
             "url": "https://github.com/Bao-Gun/dsh-upgrade.git",
-            "commit": "6babad8fe670032dc835d7f6f415d650d06d4902"
+            "commit": "5d53ab6404be8ac7c2beb681441915568f975d32"
           }
         }
       ]
