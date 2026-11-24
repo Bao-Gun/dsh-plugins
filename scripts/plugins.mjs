@@ -39,18 +39,18 @@ export const PLUGINS = [
     category: 'interface',
     keywords: ['restart', 'precheck', 'reload'],
   },
-  // dsh-upgrade 还进不来，两条都要先补：
-  //   - 仓库是 private（Pages 与匿名 clone 都不行），要么转 public 要么改走别的分发
-  //   - package.json 没声明 dsh.bundle.patch，装上去就是 not-a-bundle
-  // {
-  //   name: 'dsh-upgrade',
-  //   repo: 'https://github.com/Bao-Gun/dsh-upgrade.git',
-  //   refs: ['main'],
-  //   title: { en: 'Upgrade', zh: '升级' },
-  //   description: { en: '...', zh: '...' },
-  //   icon: 'icons/dsh-upgrade.svg',
-  //   author: 'Bao-Gun',
-  //   category: 'interface',
-  //   keywords: ['upgrade'],
-  // },
+  {
+    name: 'dsh-upgrade',
+    repo: 'https://github.com/Bao-Gun/dsh-upgrade.git',
+    refs: ['main'],
+    title: { en: 'Upgrade', zh: '升级' },
+    description: {
+      en: 'An upgrade entry in the dsh web sidebar: detects new dsh and plugin versions, upgrades plugins one by one in a batch, then optionally runs the startup precheck and restarts.',
+      zh: '在 dsh web 侧栏加一条「升级」入口：同时盯 dsh 本体与已装插件的新版本，插件可一键逐个升，升完顺手跑一遍预检再重启。',
+    },
+    icon: 'icons/dsh-upgrade.svg',
+    author: 'Bao-Gun',
+    category: 'interface',
+    keywords: ['upgrade', 'update', 'plugins', 'restart'],
+  },
 ]

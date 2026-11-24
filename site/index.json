@@ -59,6 +59,46 @@
           }
         }
       ]
+    },
+    {
+      "name": "dsh-upgrade",
+      "title": {
+        "en": "Upgrade",
+        "zh": "升级"
+      },
+      "description": {
+        "en": "An upgrade entry in the dsh web sidebar: detects new dsh and plugin versions, upgrades plugins one by one in a batch, then optionally runs the startup precheck and restarts.",
+        "zh": "在 dsh web 侧栏加一条「升级」入口：同时盯 dsh 本体与已装插件的新版本，插件可一键逐个升，升完顺手跑一遍预检再重启。"
+      },
+      "icon": "icons/dsh-upgrade.svg",
+      "author": "Bao-Gun",
+      "homepage": "https://github.com/Bao-Gun/dsh-upgrade",
+      "repository": {
+        "url": "https://github.com/Bao-Gun/dsh-upgrade"
+      },
+      "metadata": {
+        "category": "interface",
+        "keywords": [
+          "upgrade",
+          "update",
+          "plugins",
+          "restart"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1795486625,
+          "engines": {
+            "dsh": ">=0.2.2-rc.5"
+          },
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Bao-Gun/dsh-upgrade.git",
+            "commit": "6babad8fe670032dc835d7f6f415d650d06d4902"
+          }
+        }
+      ]
     }
   ]
 }
